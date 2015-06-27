@@ -1,0 +1,71 @@
+html,body{
+	height: 100%;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.headtext{
+	color: rgb(51,122,183);
+	font-weight: bold;
+	font-size: 40px;
+}
+
+#wrapper {
+  margin-top: 20px;
+  border: 1px #e4e4e4 solid;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 6px #ccc;
+  background-color: #fff;
+  min-height: 95%;
+}
+
+#footer{
+	margin-top: 20px;
+	border-top: 1px #e4e4e4 solid;
+	border-left: 1px #e4e4e4 solid;
+	border-right: 1px #e4e4e4 solid;
+	border-radius: 4px;
+	background-color: #383838;
+	color: #fff;
+	min-height: 5%;
+}
+
+#topbar{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-top: 1px #e4e4e4 solid;
+	border-bottom: 1px #e4e4e4 solid;
+}
+
+.leftbox{
+
+	border:1px #e4e4e4 solid; 
+	border-radius: 4px;
+	min-height:100px; 
+	padding:10px;
+}
+
+#topline{
+	width: 100%;
+	height: 10px;
+	background-color: rgb(51,122,183);
+}
+
+.shorten
+{
+	overflow: hidden; 
+	max-height: 80px;
+}
+
+.carousel-inner img{
+	max-height:400px;
+	width:100%;
+}
+
+#company-bar img{
+	width:120px;
+	height:80px;
+}

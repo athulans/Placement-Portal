@@ -1,0 +1,30 @@
+<!--
+<?php require_once( 'admin/cms.php' ); 
+$route='showcontact';
+require_once( 'header.php' ); 
+?>
+-->
+<div class="col-md-9">
+<table class="table table-striped ">
+
+<tr>
+	<th class="col-md-2">Name</th>
+	<th class="col-md-2">Email</th>
+	<th class="col-md-10">Comment</th>
+</tr>
+<cms:pages masterpage='contact.php' >
+	<tr>
+		<td><cms:show name /></td>
+		<td><cms:show email /></td>
+		<td><cms:show comment /></td>
+	</tr>
+</cms:pages>
+
+</table>
+</div>
+
+<!--
+<?php 
+require_once( 'footer.php' ); 
+COUCH::invoke(); ?>
+-->
