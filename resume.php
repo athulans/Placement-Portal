@@ -29,4 +29,7 @@ require_once( 'header.php' );
     <button type="submit" class="btn btn-default">Upload</button>
   </form>
 </div>
-<?php } ?>
+  <?php 
+    }
+    require_once( 'footer.php' ); 
+    ?>
