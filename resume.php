@@ -4,11 +4,14 @@ if(!isset($_SESSION['UID']))
 {
   header("location:placements.php");
 }
+if(isset($_POST["resume"]))
+{
 include_once "databaseconnection.php";
 $sql = 'SELECT * FROM student where UID="' . $_SESSION["UID"] . '"';
 $res = mysql_query($sql, $con);
 $row = mysql_fetch_array($res);
 }
+
 $route='login';
 require_once( 'header.php' ); 
 ?>
@@ -24,7 +27,7 @@ require_once( 'header.php' );
   <form action="" method="post"  enctype="multipart/form-data">
     <div class="form-group">
       <label >Select file: </label>
-      <input name="resume" class="form-control" type="file" accept=".pdf .doc .docx .odf">
+      <input name="resume" class="form-control" type="file" accept=".pdf,.doc,.docx,.odf">
     </div>
     <button type="submit" class="btn btn-default">Upload</button>
   </form>
