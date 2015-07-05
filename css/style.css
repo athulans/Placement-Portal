@@ -11,7 +11,11 @@ body {
 	font-weight: bold;
 	font-size: 40px;
 }
-
+.tint {
+  background: rgba(60, 106, 255, 0.2);
+  transition: all .3s linear;  
+  box-shadow: rgba(0,0,255,.2) 3px 5px 5px;
+}
 #wrapper {
   margin-top: 20px;
   border: 1px #e4e4e4 solid;
