@@ -21,7 +21,7 @@ Placement & HRD Cell
 </cms:editable>
 </div>
 
-<div class="col-md-offset-1 col-md-4" style="padding:20px">
+<div class="col-md-offset-1 col-md-4 tint" style="padding:20px">
 	<h3><cms:editable name='title2' type='text'>
 		Contact Us
 	</cms:editable></h3>
