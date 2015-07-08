@@ -14,10 +14,10 @@ require_once( 'header.php' );
 <cms:editable name='box3_content' required="0" type='richtext' />
 </cms:template>
 
-<div id="home" class="row" style="min-height:60%">
+<div id="home"  style="min-height:60%">
+<div class="row row-height" >
 
-
-  <div class="col-md-3 col-xs-12">
+  <div class="col-md-3 col-xs-12 col-height col-top">
 
     <cms:if box1_title >
     <div class="col-md-12 col-xs-6 leftbox" style="margin-bottom:20px">
@@ -42,7 +42,7 @@ require_once( 'header.php' );
 
 </div>
 
-<div class="col-md-6 col-xs-12 text-center" >
+<div class="col-md-6 col-xs-12 text-center col-height col-top" >
   <div id="slider1_container">
     <div id="myCarousel" class="carousel slide" style="">
       <ol class="carousel-indicators">
@@ -68,12 +68,12 @@ require_once( 'header.php' );
 </div>
 </div>
 
-<div class="col-md-3 col-xs-12" style="">
-  <div class="col-md-12 leftbox" style="">
+<div class="col-md-3 col-xs-12 col-height col-top" style="min-height:60%">
+  <div class="col-md-12 leftbox inside-full-height" style="">
     <!--<div style="background-color: #f4f4f4;"> -->
     <h4>News Feed</h4>
     <!--<div>-->
-    <marquee direction="up" style="background-color: white; max-height:300px;">
+    <marquee direction="up" class="" style="background-color: white; height:90%">
 
       <cms:pages masterpage='news.php' >
       <div class="media">
@@ -90,6 +90,9 @@ require_once( 'header.php' );
 </marquee>
 </div> <!-- news div -->
 </div> <!-- right side div -->
+
+</div> <!-- row -->
+<div class="row ">
 
 <div id="company-bar" class="col-md-12 col-xs-12">
   <marquee direction="left">
@@ -116,6 +119,8 @@ require_once( 'header.php' );
   </cms:editable>
 </marquee>
 </div>
+
+</div> <!-- row -->
 
 </div> <!-- home div -->
 
