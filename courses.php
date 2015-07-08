@@ -1,523 +1,140 @@
-<?php 
+<?php
 session_start();
-require_once( 'admin/cms.php' ); 
+require_once( 'admin/cms.php' );
 $route='courses';
-require_once( 'header.php' ); 
+require_once( 'header.php' );
 ?>
 
 <cms:template title="Courses" clonable='0' />
 
-<div id="courses" class="col-md-12" style="padding:20px;">
-  <cms:editable name='content2' type='richtext'></cms:editable>
-  <h3><cms:editable name='title' type='text'>Syllabus</cms:editable></h3>
-</div>
-<div class="col-md-9 text-justify" style="padding:20px; overflow: auto; max-height:600px;">
+<div id="courses" class="col-md-offset-1 col-md-10" style="padding:20px;">
+
   <cms:editable name='content' type='richtext'>
-  <table class="table table-striped ">
-    <tbody>
-      <tr>
-        <th id="1st" colspan="5">
-          FIRST & SECOND SEMESTER
-        </td>
-      </tr>
-      <tr>
-        <th >Sl No. </th>
-        <th >Topics </th>
-        <th >Hours /Week </th>
-        <th >Hours /Month </th>
-        <th >Total Hrs /Semester </th>
-      </tr>
-      <tr>
-        <td  >PLHR - 101 </td>
-        <td  >Yoga Classes </td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td  >PLHR - 102 </td>
-        <td  >Seminar </td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td  >PLHR - 103 </td>
-        <td  >Spoken English /Library   Reference </td>
-        <td >2 </td>
-        <td >- </td>
-        <td >30 </td>
-      </tr>
-      <tr>
-        <td  >PLHR - 104 </td>
-        <td  >Study Group Activities (GD,   Quiz, Product Marketing, Debate, Skit) </td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td  >PLHR - 105 </td>
-        <td  >Sports &amp; Games </td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td  >PLHR - 106 </td>
-        <td  >HDP( Time management , Self   Discovery &amp; Self Management, Confidence Building &amp; Intellectual   Maturity) </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >8 </td>
-      </tr>
-      <tr>
-        <td  >PLHR - 107 </td>
-        <td  >Moral Science ( Emotional   Intelligence, Purposeful Living, Religion &amp; Spirituality etc.) </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >8 </td>
-      </tr>
-      <tr>
-        <td  >PLHR - 108 </td>
-        <td  >Health Science </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >8 </td>
-      </tr>
-      <tr>
-        <td  >PLHR - 109 </td>
-        <td  >Meeting of Animators </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >8 </td>
-      </tr>
-      
-      <tr>
-        <th id="3rd" colspan="5">
-          THIRD SEMESTER 
-        </td>
-      </tr> 
-      <tr>
-        <td  >PLHR - 301 </td>
-        <td  >Placement Training </td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td  >PLHR - 302 </td>
-        <td  >Seminar </td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td  >PLHR - 303 </td>
-        <td  >Library Reference/ Project Work </td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td  >PLHR - 304 </td>
-        <td  >Study Group Activities (GD,   Quiz, Product Marketing, Debate, Skit)</td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td  >PLHR - 305 </td>
-        <td  >Sports &amp; Games </td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td  >PLHR - 306 </td>
-        <td  >HDP ( Interpersonal   Relationship, Behavior Maturity, Relation to the Institution) </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td  >PLHR - 307 </td>
-        <td  >Moral Science( Religion &amp;   Spirituality) </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td  >PLHR - 308 </td>
-        <td  >Health Science </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td  >PLHR - 309 </td>
-        <td  >Meeting of Animators &amp;   Project Guide </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <th id="4th" colspan="5">
-          FOURTH SEMESTER 
-        </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 401 </td>
-        <td  >Placement Training </td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 402 </td>
-        <td  >Seminar </td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 403 </td>
-        <td  >Library Reference/ Project Work </td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 404 </td>
-        <td  >Study Group Activities (GD,   Quiz, Product Marketing, Debate, Skit)</td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 405 </td>
-        <td  >Sports &amp; Games </td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 406 </td>
-        <td  >HDP ( Decision Making, Emotional   Maturity) </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 407 </td>
-        <td  >Moral Science ( Friendship,   Developmental Stages of Life) </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 408 </td>
-        <td  >Health Science </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 409 </td>
-        <td  >Meeting of Animators &amp;   Project Guide </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <th id="5th" colspan="5">
-          FIFTH SEMESTER 
-        </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 501 </td>
-        <td   >Placement Training </td>
-        <td >3 </td>
-        <td >- </td>
-        <td >45 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 502 </td>
-        <td   >Seminar </td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 503 </td>
-        <td   >Library Reference/ Project Work </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 504 </td>
-        <td   >Study Group Activities (GD,   Quiz, Product Marketing, Debate, Skit)</td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 505 </td>
-        <td   >Sports &amp; Games </td>
-        <td >- </td>
-        <td >- </td>
-        <td >- </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 506 </td>
-        <td   >HDP (Social Relationships, Team   Management Skills) </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 507 </td>
-        <td   >Moral Science ( Differential   Psychology, Feelings, Synergic Personality) </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 508 </td>
-        <td   >Health Science </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 509 </td>
-        <td   >Meeting of Animators &amp;   Project Guide </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <th id="6th" colspan="5">
-          SIXTH SEMESTER 
-        </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 601 </td>
-        <td  >Placement Training </td>
-        <td >3 </td>
-        <td >- </td>
-        <td >45 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 602 </td>
-        <td  >Seminar </td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 603 </td>
-        <td  >Library Reference/ Project Work </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 604 </td>
-        <td  >Study Group Activities (GD,   Quiz, Product Marketing, Debate, Skit)</td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 605 </td>
-        <td  >Sports &amp; Games </td>
-        <td >- </td>
-        <td >- </td>
-        <td >- </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 606 </td>
-        <td  >HDP ( Power Marketing , Self   Management) </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 607 </td>
-        <td  >Moral Science( Team Work,   Leadership, Examinations &amp; its purpose) </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 608 </td>
-        <td  >Health Science </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td   >PLHR - 609 </td>
-        <td  >Meeting of Animators &amp;   Project Guide </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <th id="7th" colspan="5">
-          SEVENTH SEMESTER 
-        </td>
-      </tr>
-      <tr>
-        <td >PLHR - 701 </td>
-        <td >Placement Training </td>
-        <td >2 </td>
-        <td >- </td>
-        <td >30 </td>
-      </tr>
-      <tr>
-        <td >PLHR - 702 </td>
-        <td >Seminar </td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td >PLHR - 703 </td>
-        <td >Library Reference/ Project Work </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td >PLHR  704 </td>
-        <td >Study Group Activities (GD,   Quiz, Product Marketing, Debate, Skit)</td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td >PLHR - 705 </td>
-        <td >Sports &amp; Games </td>
-        <td >- </td>
-        <td >- </td>
-        <td >- </td>
-      </tr>
-      <tr>
-        <td >PLHR - 706 </td>
-        <td >HDP ( Work Management,   Professionalism) </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td >PLHR - 707 </td>
-        <td >Moral Science( Relaxation   Techniques &amp; Purpose, Value Clarifications, Effectiveness) </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td >PLHR - 708 </td>
-        <td >Health Science </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td >PLHR - 709 </td>
-        <td >Meeting of Animators &amp;   Project Guide </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <th id="8th" colspan="5">
-          EIGHTH SEMESTER 
-        </td>
-      </tr>
-      <tr>
-        <td >PLHR - 801 </td>
-        <td >Placement Training </td>
-        <td >- </td>
-        <td >- </td>
-        <td >- </td>
-      </tr>
-      <tr>
-        <td >PLHR - 802 </td>
-        <td >Seminar </td>
-        <td >- </td>
-        <td >- </td>
-        <td >- </td>
-      </tr>
-      <tr>
-        <td >PLHR - 803 </td>
-        <td >Library Reference/ Project Work </td>
-        <td >&nbsp;</td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td >PLHR - 804 </td>
-        <td >Study Group Activities (GD,   Quiz, Product Marketing, Debate, Skit)</td>
-        <td >1 </td>
-        <td >- </td>
-        <td >15 </td>
-      </tr>
-      <tr>
-        <td >PLHR - 805 </td>
-        <td >Sports &amp; Games </td>
-        <td >- </td>
-        <td >- </td>
-        <td >- </td>
-      </tr>
-      <tr>
-        <td >PLHR - 806 </td>
-        <td >HDP ( Social Commitment, Family   Life &amp; Problems) </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td >PLHR - 807 </td>
-        <td >Moral Science ( Anger   Management, Life Skills) </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td >PLHR - 808 </td>
-        <td >Health Science </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-      <tr>
-        <td >PLHR - 809 </td>
-        <td >Meeting of Animators &amp;   Project Guide </td>
-        <td >- </td>
-        <td >1 </td>
-        <td >4 </td>
-      </tr>
-    </tbody>
-  </table>
-</cms:editable>
-</div>
-
-<div class="col-md-3" style="padding:20px">
-  <cms:editable name='sidebar' type='richtext'>
-  <div id="mynav " class="list-group" > 
-    <a class="list-group-item" href="#1st">FIRST & SECOND SEMESTER</a>
-    <a class="list-group-item" href="#3rd">THIRD SEMESTER</a>
-    <a class="list-group-item" href="#4th">FOURTH SEMESTER</a>
-    <a class="list-group-item" href="#5th">FIFTH SEMESTER</a>
-    <a class="list-group-item" href="#6th">SIXTH SEMESTER</a>
-    <a class="list-group-item" href="#7th">SEVENTH SEMESTER</a>
-    <a class="list-group-item" href="#8th">EIGHTH SEMESTER</a>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Training Specialties</h3>
+    </div>
+    <div class="panel-body">
+      <ul>
+        <li>Mandatory, attendance recorded</li>
+        <li>Five Hours a week training. One Hour session everyday (4-5 pm)</li>
+        <li>Structured Syllabus</li>
+        <li>Syllabus framed in consultation with the industry HR Departments to suit their requirements</li>
+      </ul>
+    </div>
   </div>
-  </cms:editable>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Competencies & Skills fostered</h3>
+    </div>
+    <div class="panel-body">
+      <ul>
+        <li>English Language Proficiency – Both Spoken and Written</li>
+        <li>Numerical skills</li>
+        <li>Computational skills</li>
+        <li>Entrepreneurial skills</li>
+        <li>Group Discussion</li>
+        <li>Debate</li>
+        <li>Time Management skills</li>
+        <li>Negotiation Skills</li>
+        <li>Problem Solving Skills</li>
+        <li>Team Work Skills</li>
+        <li>Behaviour in Multi-Cultural Workplace</li>
+        <li>Driving Skills</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Methodology</h3>
+    </div>
+    <div class="panel-body">
+      <ul>
+        <li>Language Lab</li>
+        <li>Study Group Activities including Group  Discussion, Product Marketing, General & Technical Quiz , JAM and debate</li>
+        <li>Professional Counseling</li>
+        <li>Bridge Course for First Year Students</li>
+        <li>Input Session for the Final Year Students & Parents</li>
+        <li>Aptitude Training online and offline</li>
+        <li>Mock Interviews</li>
+        <li>Resume Writing (print).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Syllabus</h3>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Year</th><th>Program</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>First Year ( First & Second Sem)</th>
+          <td>Spoken English + Language Lab</td>
+        </tr>
+        <tr>
+          <td></td><td>Seminar on  subjects of student choice</td>
+        </tr>
+        <tr>
+          <td></td><td>Moral Science  & Health Science</td>
+        </tr>
+        <tr>
+          <td></td><td>Library Reference / T4S / S4S</td>
+        </tr>
+        <tr>
+          <th>Second Year( Third & Fourth Sem)</th>
+          <td>Seminar</td>
+        </tr>
+        <tr>
+          <td></td><td>Yoga</td>
+        </tr>
+        <tr>
+          <td></td><td>Business English / Language Lab</td>
+        </tr>
+        <tr>
+          <td></td><td>Sports / Games / Library Reference / T4S / S4S</td>
+        </tr>
+        <tr>
+          <th>Third Year (Fifth & Sixth Sem )</th>
+          <td>Placement Training / Infosys Soft Skills Training</td>
+        </tr>
+        <tr>
+          <td></td><td>Seminar</td>
+        </tr>
+        <tr>
+          <td></td><td>Sports / Games / Library Reference / T4S / S4S</td>
+        </tr>
+        <tr>
+          <td></td><td>Meeting of Animator / Project Guide</td>
+        </tr>
+        <tr>
+          <th>Fourth Year (Seventh & Eight Sem)</th>
+          <td>Meeting the Project Guide</td>
+        </tr>
+        <tr>
+          <td></td><td>Placement Training</td>
+        </tr>
+        <tr>
+          <td></td><td>Infosys Foundation Program / Human Development Programs</td>
+        </tr>
+        <tr>
+          <td></td><td>Sports / Games / Library Reference / T4S / S4S</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</cms:editable>
+
 </div>
 
-<?php 
-require_once( 'footer.php' ); 
+<?php
+require_once( 'footer.php' );
 COUCH::invoke(); ?>

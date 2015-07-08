@@ -1,8 +1,8 @@
-<?php 
+<?php
 session_start();
-require_once( 'admin/cms.php' ); 
+require_once( 'admin/cms.php' );
 $route='home';
-require_once( 'header.php' ); 
+require_once( 'header.php' );
 ?>
 
 <cms:template title="Home Page" clonable='0'>
@@ -14,7 +14,7 @@ require_once( 'header.php' );
 <cms:editable name='box3_content' required="0" type='richtext' />
 </cms:template>
 
-<div id="home" class="row" style="min-height:60%"> 
+<div id="home" class="row" style="min-height:60%">
 
 
   <div class="col-md-3 col-xs-12">
@@ -46,34 +46,26 @@ require_once( 'header.php' );
   <div id="slider1_container">
     <div id="myCarousel" class="carousel slide" style="">
       <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-      </ol>
-      <!-- Carousel items -->
-      <div class="carousel-inner">
-        <div class="active item">
-          <img u="image" src="<cms:editable name='slide_image1' label='Image'desc='Upload image 1' type='image'/>"  style=""/>
-        </div>
-        <div class="item">
-          <img u="image" src="<cms:editable name='slide_image2' label='Image'desc='Upload image 2' type='image'/>"  style=""/>
-        </div>
-        <div class="item">
-          <img u="image" src="<cms:editable name='slide_image3' label='Image'desc='Upload image 3' type='image'/>"  style=""/>
-        </div>
-        <div class="item">
-          <img u="image" src="<cms:editable name='slide_image4' label='Image'desc='Upload image 4' type='image'/>"  style=""/>
-        </div>
+        <cms:pages masterpage='image.php' >
+        <li data-target="#myCarousel" data-slide-to="<cms:php>echo  <cms:show k_absolute_count/> - 1; </cms:php>" <cms:if k_absolute_count=='1' ><cms:show 'class="active"' /></cms:if> ></li>
+      </cms:pages>
+    </ol>
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+      <cms:pages masterpage='image.php' >
+      <div class="item <cms:if k_absolute_count=='1'><cms:show 'active'/></cms:if>">
+        <img u="image" src="<cms:show slide />"  style=""/>
       </div>
-      <!-- Carousel nav -->
-      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div>
+    </cms:pages>
   </div>
-  <div class="col-md-12">
-    <cms:editable name="middle_content" type="richtext"></cms:editable>
-  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+</div>
+<div class="col-md-12">
+  <cms:editable name="middle_content" type="richtext"></cms:editable>
+</div>
 </div>
 
 <div class="col-md-3 col-xs-12" style="">
@@ -95,21 +87,8 @@ require_once( 'header.php' );
       </div>
     </div>
   </cms:pages>
-    <!--
-        <div class="media">
-            <div class="media-left">
-              <a href="#">
-                  <img class="media-object" src="" height="64px" width="64px">
-              </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading">News heading</h4>
-              <p>description</p>
-            </div>
-        </div>
-      -->
-    </marquee>
-  </div> <!-- news div -->
+</marquee>
+</div> <!-- news div -->
 </div> <!-- right side div -->
 
 <div id="company-bar" class="col-md-12 col-xs-12">
@@ -140,9 +119,6 @@ require_once( 'header.php' );
 
 </div> <!-- home div -->
 
-<?php 
-require_once( 'footer.php' ); 
+<?php
+require_once( 'footer.php' );
 COUCH::invoke(); ?>
-
-
-
