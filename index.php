@@ -73,7 +73,7 @@ require_once( 'header.php' );
     <!--<div style="background-color: #f4f4f4;"> -->
     <h4>News Feed</h4>
     <!--<div>-->
-    <marquee direction="up" class="" style="background-color: white; height:90%">
+    <marquee direction="up" scrollamount="5" class="" style="background-color: white; height:90%">
 
       <cms:pages masterpage='news.php' >
       <div class="media">
