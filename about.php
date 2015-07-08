@@ -1,13 +1,15 @@
-<?php 
+<?php
 session_start();
-require_once( 'admin/cms.php' ); 
+require_once( 'admin/cms.php' );
 $route='about';
-require_once( 'header.php' ); 
+require_once( 'header.php' );
 ?>
 
 <cms:template title="About" clonable='0' />
 
-<div id="about" class="col-md-7 text-justify" style="">
+<div class="row row-height" >
+
+<div id="about" class="col-md-7 text-justify col-height col-top" style="">
 <h3><cms:editable name='title' type='text'>
 Placement & HRD Cell
 </cms:editable></h3>
@@ -19,23 +21,25 @@ Placement & HRD Cell
 	<p>The college has started an Entrepreneurship Development Cell . Students are given opportunities to visit various industries and learn more about an enterprise.</p>
 	<p>A full-fledged syllabus is planned in the beginning of the every academic year by the HRD trainers.</p>
 </cms:editable>
-</div>
+</div> <!-- about -->
 
-<div class="col-md-offset-1 col-md-4 tint" style="padding:20px">
+<div class="col-md-4 tint col-height col-top" style="padding:20px">
 	<h3><cms:editable name='title2' type='text'>
 		Contact Us
 	</cms:editable></h3>
-	<cms:editable name='content2' type='richtext'> 
+	<cms:editable name='content2' type='richtext'>
 	<address>
 		<strong>Mrs. Vini Jose</strong><br>
 		HR & Placement Officer,<br>
-		Sahrdaya College of Engineering & Technology,<br> 
+		Sahrdaya College of Engineering & Technology,<br>
 		Phone: 91- 0480- 2759275 (12 lines)<br>
 		E mail: <a href="mailto:hr@sahrdaya.ac.in">hr@sahrdaya.ac.in</a>
  	<address>
  	</cms:editable>
 </div>
 
-<?php 
-require_once( 'footer.php' ); 
+</div> <!-- row -->
+
+<?php
+require_once( 'footer.php' );
 COUCH::invoke(); ?>
