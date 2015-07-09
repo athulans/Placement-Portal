@@ -3,6 +3,7 @@
 if(!isset($_SESSION['UID']))
 {
   $pwdfail = 0;
+  $sourcedir="resume/";
   if(isset($_POST['user_name']))
   {
     include_once "database_credentials.php";
@@ -215,10 +216,17 @@ require_once( 'header.php' );
                     </tr>
                     <tr>
                       <th>Resume : </th>
-                      <?php //.$sourcedir.$row["Resume"].?>
+                      <?php if(isset($row["Resume"])){
+								$resume=$sourcedir.$row["Resume"];
+							}
+							else
+							{
+								$resume="#";
+							}
+					  ?>
                       <td>
                           <div class="btn btn-group">
-                          <?php echo '<a class="btn btn-default" href="#">View</a>'; ?>
+                          <?php echo '<a class="btn btn-default" href="'.$resume.'">View</a>'; ?>
                           <a class="btn btn-default" href="resume.php">Change</a>
                           </div>
                         </td>
