@@ -8,11 +8,6 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/bootstrap-show-password.min.js"></script>
 
-  <!--
-  <link rel="stylesheet" href="css/animsition.min.css">
-  <script src="js/jquery.animsition.min.js"></script>
-  <script src="js/script.js"></script> -->
-
 
   <title>Placement Portal - Sahrdaya</title>
 </head>
